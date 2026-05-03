@@ -216,3 +216,19 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Environment and secrets
+.env
+ 
+# Model file (too large for GitHub)
+*.joblib
+ 
+# Dataset (too large for GitHub)
+data/
+ 
+# Build artifacts
+__pycache__/
+*.py[cod]
+dist/
+build/
+*.egg-info/
