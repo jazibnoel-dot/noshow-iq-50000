@@ -11,7 +11,8 @@ load_dotenv()
 
 app = FastAPI()
 
-client = MongoClient(os.getenv("MONGO_URI"))
+_mongo_uri = (os.getenv("MONGO_URI") or "").strip()
+client = MongoClient(_mongo_uri, serverSelectionTimeoutMS=5000)
 db = client["noshowiq"]
 predictions_col = db["predictions"]
 training_runs_col = db["training_runs"]
